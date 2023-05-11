@@ -1,6 +1,5 @@
 <script lang="ts">
   import { T } from "@threlte/core";
-  // import { OrbitControls } from "@threlte/extras";
   import { onMount } from "svelte";
   import Emitter from "./Emitter.svelte";
   import TestBed from "./TestBed.svelte";
