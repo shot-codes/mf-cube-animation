@@ -20,7 +20,7 @@
     rotation: Parameters<Euler["set"]>;
   };
   let bodies: Body[] = [];
-  let lastBodyMounted: number = 0;
+  let lastBodyMounted = 0;
   let bodyEveryMilliseconds = 1000;
   let longevityMilliseconds = 24000;
   useFrame(() => {

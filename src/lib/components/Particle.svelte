@@ -28,7 +28,7 @@
 <script lang="ts">
   import { T } from "@threlte/core";
   import { Collider, RigidBody } from "@threlte/rapier";
-  import { LineBasicMaterial, type Euler, Color, BufferGeometry, Vector3 } from "three";
+  import { type Euler, Color, BufferGeometry, Vector3 } from "three";
   import ShadowParticle from "./ShadowParticle.svelte";
 
   let white = new Color(0xffffff);
@@ -41,7 +41,6 @@
 
 <T.Group {position} {rotation}>
   <RigidBody
-    let:ref
     type={"dynamic"}
     on:wake={() => {
       active_color = green;

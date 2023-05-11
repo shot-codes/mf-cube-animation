@@ -1,11 +1,11 @@
 <script lang="ts">
   import { T } from "@threlte/core";
   import { Collider } from "@threlte/rapier";
-  import { BoxGeometry, MeshStandardMaterial } from "three";
 
   export let x_pos: number;
+  export let x_rot: number;
 </script>
 
-<T.Group position={[0, 0.02, x_pos]}>
-  <Collider shape={"cuboid"} args={[10, 100, 0.1]} />
+<T.Group position={[0, 0.02, x_pos]} rotation.x={x_rot}>
+  <Collider shape={"cuboid"} args={[10, 10, 0.01]} />
 </T.Group>
