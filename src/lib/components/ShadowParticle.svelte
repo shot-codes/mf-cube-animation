@@ -21,5 +21,5 @@
   }}
 >
   <T.BoxGeometry args={[0.25, 0.25, 0.25]} />
-  <T.MeshPhongMaterial color={active_color} transparent={true} opacity={0} />
+  <T.MeshPhongMaterial color={active_color} transparent={true} opacity={0.3} />
 </T.Mesh>

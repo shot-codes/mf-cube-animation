@@ -8,7 +8,7 @@
 <div>
   <Canvas>
     <World gravity={[0, -2, 0]}>
-      <!-- <Debug depthTest={false} depthWrite={false} linewidth={6}/> -->
+      <Debug depthTest={false} depthWrite={false} />
       <Scene />
       <HTML slot="fallback" transform>
         <p class="text-xs">
