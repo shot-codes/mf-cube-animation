@@ -9,7 +9,7 @@
 </script>
 
 <T.Mesh
-  on:click={() => {
+  on:pointerenter={() => {
     rigidBody?.applyImpulse(
       new Vector3((Math.random() - 0.5) * 0.06, Math.random() * 0.06, (Math.random() - 0.5) * 0.06),
       true

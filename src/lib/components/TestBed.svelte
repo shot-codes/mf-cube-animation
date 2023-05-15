@@ -4,5 +4,5 @@
 </script>
 
 <T.Group position={[0, 0.02, 0]}>
-  <Collider shape={"cuboid"} args={[10, 0.001, 10]} />
+  <Collider shape={"cuboid"} restitution={1} args={[10, 0.001, 10]} />
 </T.Group>

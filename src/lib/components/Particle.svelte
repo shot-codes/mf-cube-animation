@@ -49,19 +49,10 @@
       active_color = white;
     }}
   >
-    <Collider shape={"cuboid"} args={[0.125, 0.125, 0.125]} />
+    <Collider shape={"cuboid"} restitution={1} args={[0.125, 0.125, 0.125]} />
     <T.Line {geometry}>
       <T.LineBasicMaterial color={active_color} />
     </T.Line>
     <ShadowParticle {active_color} />
-    <!-- <T.Mesh
-      on:click={() => {
-        console.log(ref);
-        ref.applyImpulse(10);
-      }}
-      >
-      <T.BoxGeometry args={[0.25, 0.25, 0.25]}/>
-      <T.MeshStandardMaterial color={active_color}/>
-    </T.Mesh> -->
   </RigidBody>
 </T.Group>

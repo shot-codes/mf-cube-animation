@@ -1,9 +1,12 @@
 <script lang="ts">
   import { T } from "@threlte/core";
+  import { interactivity } from "@threlte/extras";
   import type { Vector3, Euler } from "three";
   import Particle from "./Particle.svelte";
 
   export let position: Parameters<Vector3["set"]>;
+
+  interactivity();
 
   const getRandomPosition = (): Parameters<Vector3["set"]> => {
     return [Math.random() * 10 - 5, Math.random(), 0];
@@ -13,7 +16,7 @@
   };
 
   let bodies: [Parameters<Vector3["set"]>, Parameters<Euler["set"]>][] = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 100; i++) {
     bodies.push([getRandomPosition(), getRandomRotation()]);
   }
 </script>

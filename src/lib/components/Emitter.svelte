@@ -21,7 +21,7 @@
   };
   let bodies: Body[] = [];
   let lastBodyMounted = 0;
-  let bodyEveryMilliseconds = 2000;
+  let bodyEveryMilliseconds = 3000;
   let longevityMilliseconds = 24000;
   useFrame(() => {
     if (lastBodyMounted + bodyEveryMilliseconds < Date.now()) {
