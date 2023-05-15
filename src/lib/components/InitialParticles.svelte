@@ -16,7 +16,7 @@
   };
 
   let bodies: [Parameters<Vector3["set"]>, Parameters<Euler["set"]>][] = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 50; i++) {
     bodies.push([getRandomPosition(), getRandomRotation()]);
   }
 </script>

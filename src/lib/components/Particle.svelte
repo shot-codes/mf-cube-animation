@@ -32,7 +32,7 @@
   import ShadowParticle from "./ShadowParticle.svelte";
 
   let white = new Color(0xffffff);
-  let green = new Color(0x00ff00);
+  let green = new Color(0xc6ff4c);
   let active_color = white;
 
   export let position: Parameters<Vector3["set"]>;

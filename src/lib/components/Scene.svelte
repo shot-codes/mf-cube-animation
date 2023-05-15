@@ -10,14 +10,19 @@
   let canvas_w = 1;
   let canvas_h = 1;
   let aspect = 1;
-  const frustumSize = 4;
+  let frustumSize = 4;
 
-  onMount(() => {
-    canvas_w = window.innerWidth;
-    canvas_h = window.innerHeight;
+  $: {
     aspect = canvas_w / canvas_h;
-  });
+    console.log(canvas_w);
+  }
+
+  $: {
+    frustumSize = 4000 / canvas_w;
+  }
 </script>
+
+<svelte:window bind:innerHeight={canvas_h} bind:innerWidth={canvas_w} />
 
 <T.OrthographicCamera
   makeDefault
