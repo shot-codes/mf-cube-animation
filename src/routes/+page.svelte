@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Canvas } from "@threlte/core";
   import { HTML } from "@threlte/extras";
-  import { World } from "@threlte/rapier";
+  import { World, Debug } from "@threlte/rapier";
   import Scene from "$lib/components/Scene.svelte";
 </script>
 
 <div>
   <Canvas>
-    <World gravity={[0, -2, 0]}>
+    <World gravity={[0, -1, 0]}>
       <!-- <Debug depthTest={false} depthWrite={false} /> -->
       <Scene />
       <HTML slot="fallback" transform>

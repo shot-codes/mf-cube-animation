@@ -1,9 +1,11 @@
 <script lang="ts">
   import { T } from "@threlte/core";
+  import { OrbitControls } from "@threlte/extras";
   import { onMount } from "svelte";
   import Emitter from "./Emitter.svelte";
   import TestBed from "./TestBed.svelte";
   import Wall from "./Wall.svelte";
+  import InitialParticles from "./InitialParticles.svelte";
 
   let canvas_w = 1;
   let canvas_h = 1;
@@ -27,9 +29,9 @@
   on:create={({ ref }) => {
     ref.lookAt(0, 0, -5)
   }}
-  position.x={5}
-  position.z={5}
-  position.y={5}
+  position.x={20}
+  position.z={20}
+  position.y={20}
   fov={40}
   makeDefault
 >
@@ -41,6 +43,8 @@
 <T.AmbientLight intensity={0.2} />
 
 <T.Group position.z={-5}>
+  <InitialParticles position={[0, 5, 0]} />
+
   <Emitter />
   <TestBed />
   <Wall x_pos={0.35} x_rot={0.1} />
