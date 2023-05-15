@@ -18,7 +18,7 @@
   }
 
   $: {
-    frustumSize = 4000 / canvas_w;
+    frustumSize = 2000 / canvas_w;
   }
 </script>
 
