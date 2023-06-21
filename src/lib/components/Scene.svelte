@@ -10,16 +10,16 @@
   let canvas_w = 1;
   let canvas_h = 1;
   let aspect = 1;
-  let frustumSize = 4;
+  let frustumSize = 3;
 
   $: {
     aspect = canvas_w / canvas_h;
     console.log(canvas_w);
   }
 
-  $: {
-    frustumSize = 2000 / canvas_w;
-  }
+  // $: {
+  //   frustumSize = 1;
+  // }
 </script>
 
 <svelte:window bind:innerHeight={canvas_h} bind:innerWidth={canvas_w} />
